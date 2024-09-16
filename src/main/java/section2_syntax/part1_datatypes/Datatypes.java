@@ -121,11 +121,11 @@ public class Datatypes {
      * @return cubedInput
      */
     int[] cubeAll(int[] input) {
-        int arrayLength = 0; //YOU SHOULD GET THE CORRECT ARRAY LENGTH FIRST
+        int arrayLength = input.length; //YOU SHOULD GET THE CORRECT ARRAY LENGTH FIRST
         for(int i = 0; i < arrayLength; i++) {
-            //YOUR ITERATION CODE HERE
+            input[i] = (int) Math.pow(input[i],3);
         }
-        return null;
+        return input;
     }
 
     /**
@@ -134,7 +134,11 @@ public class Datatypes {
      * @return the cumulative product
      */
     int cumulativeProduct(int[] input) {
-        return 0;
+        int total = input[0];
+        for (int i = 1; i < input.length; i++) {
+            total *= input[i];
+        }
+        return total;
     }
 
 }
